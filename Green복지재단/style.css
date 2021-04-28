@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --main-background: #ffffff;
+    --main-green: #009800;
+    --main-text: #333333;
+    --main-yellow: #f6f6d0;
+    --contents-bg: #c0da96;
+}
+
+body {
+    margin: 0 auto;
+}
+
+nav {
+    width: 1200px;
+    height: 100px;
+    background-color: var(--main-yellow);
+    margin: 0 auto;
+    position: relative;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: var(--main-text);
+}
+
+.nav-main {
+    width: 1200px;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.nav-main ul {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.nav-main ul li:hover {
+    background-color: rgb(130, 158, 55);
+    transition: all .5s ease;
+}
+
+.nav-sub {
+    width: 1200px;
+    position: absolute;
+    z-index: 2;
+    background-color: var(--main-green);
+}
+
+.nav-sub ul {
+    display: flex;
+    justify-content: flex-end;
+    place-items: center;
+}
+
+.nav-main ul li,
+.nav-sub ul li p {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.nav-sub ul li p:hover {
+    background-color: rgb(130, 158, 55);
+    transition: all .5s ease;
+}
+
+.nav-sub ul li p a {
+    color: #fff;
+}
+
+.slide-up {
+    visibility: collapse;
+    height: 0;
+    overflow-y: hidden;
+    transition: all .5s ease;
+}
+
+.slide-down {
+    visibility: visible;
+    overflow-y: hidden;
+    height: 90px;
+    transition: all .5s ease;
+}
+
+#carousel {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: all .5s ease;
+}
+
+#contents {
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: var(--main-yellow);
+    display: flex;
+    place-items: flex-end;
+}
+
+.notice,
+.gallary {
+    bottom: 0;
+    width: 400px;
+    height: 170px;
+    background-color: var(--contents-bg);
+    margin: 0;
+    position: relative;
+}
+
+.notice h2 {
+    position: absolute;
+    top: -30px;
+    font-size: 1.2rem;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    background-color: var(--contents-bg);
+}
+
+.notice ul {
+    width: 80%;
+    margin: 4% auto;
+
+}
+
+.notice ul li {
+    padding: 2px 0;
+    border-bottom: solid 3px rgb(255, 240, 192);
+    cursor: pointer;
+}
+
+.notice ul li span {
+    float: right;
+}
+
+.gallary h2 {
+    position: absolute;
+    top: -30px;
+    font-size: 1.2rem;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    background-color: var(--contents-bg);
+}
+
+.gallary-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    place-items: center;
+}
+
+.gallary img {
+    width: 100px;
+    height: 100px;
+}
+
+.banner {
+    width: 400px;
+    height: 170px;
+    background-color: var(--main-green);
+}
+
+#pop-up {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 3;
+    visibility: hidden;
+}
+
+.pop-bg {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-text);
+    opacity: 0.4;
+}
+
+.pop-window {
+    position: absolute;
+    top: 50%;
+    left : 50%;
+    width: 50%;
+    height: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: var(--main-background);
+
+    text-align: center;
+}
+
+.pop-title {
+    margin: 3%;
+    font-size: 1.5rem;
+}
+
+.pop-content {
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+    background-color: var(--main-yellow);
+}
+
+.close-btn {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    width: 4rem;
+    height: 2rem;
+}
+
+footer {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    background-color: var(--main-yellow);
+}
